@@ -1,0 +1,21 @@
+{
+  "taxas": {
+    "pagamento_minimo_percentual": 15,
+    "juros_rotativo_mensal_percentual": 12,
+    "multa_atraso_percentual": 2,
+    "juros_atraso_mensal_percentual": 1,
+    "parcelamento_fatura_juros_percentual": 8
+  },
+
+  "explicacoes": {
+    "pagamento_minimo": "O pagamento mínimo é o valor mínimo que precisa ser pago para evitar atraso na fatura. Quando o cliente paga apenas o mínimo, o restante da fatura entra no crédito rotativo e passa a gerar juros.",
+
+    "credito_rotativo": "O crédito rotativo ocorre quando o cliente paga menos que o valor total da fatura. O valor restante passa a gerar juros mensais até que seja quitado.",
+
+    "parcelamento_fatura": "O parcelamento da fatura permite dividir o valor total em parcelas mensais. Cada parcela possui juros, normalmente menores que os do crédito rotativo.",
+
+    "limite_cartao": "O limite do cartão representa o valor máximo que pode ser utilizado em compras. Conforme a fatura é paga, o limite é liberado novamente.",
+
+    "pagamento_total": "O pagamento total da fatura evita a cobrança de juros e mantém o uso do cartão sem encargos financeiros."
+  }
+}

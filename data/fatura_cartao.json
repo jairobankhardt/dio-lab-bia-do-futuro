@@ -1,0 +1,58 @@
+{
+  "cliente": {
+    "nome": "João Silva",
+    "cartao": "Visa Platinum"
+  },
+
+  "fatura": {
+    "mes_referencia": "2026-02",
+    "vencimento": "2026-02-20",
+    "valor_total": 3222.15,
+    "pagamento_minimo": 483.32,
+    "limite_total": 5000,
+    "limite_disponivel": 1777.85
+  },
+
+  "transacoes": [
+    {
+      "data": "2026-02-01",
+      "estabelecimento": "Amazon",
+      "categoria": "Compras Online",
+      "descricao": "Fone de ouvido Bluetooth",
+      "valor": 289.90,
+      "parcelamento": "1/1"
+    },
+    {
+      "data": "2026-02-02",
+      "estabelecimento": "Supermercado Condor",
+      "categoria": "Alimentação",
+      "descricao": "Compras do mês",
+      "valor": 356.45,
+      "parcelamento": "1/1"
+    },
+    {
+      "data": "2026-02-07",
+      "estabelecimento": "Magazine Luiza",
+      "categoria": "Compras Online",
+      "descricao": "Smart TV 50\"",
+      "valor": 329.90,
+      "parcelamento": "3/10"
+    },
+    {
+      "data": "2026-02-12",
+      "estabelecimento": "Restaurante Madalosso",
+      "categoria": "Alimentação",
+      "descricao": "Jantar família",
+      "valor": 186.00,
+      "parcelamento": "1/1"
+    },
+    {
+      "data": "2026-02-21",
+      "estabelecimento": "Amazon",
+      "categoria": "Compras Online",
+      "descricao": "Teclado mecânico",
+      "valor": 459.90,
+      "parcelamento": "2/6"
+    }
+  ]
+}
