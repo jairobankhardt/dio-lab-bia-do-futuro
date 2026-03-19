@@ -5,25 +5,19 @@ from config import OPENAI_API_KEY, MODEL
 client = OpenAI(api_key=OPENAI_API_KEY)
 
 
-def carregar_dados():
-    with open("data/fatura_cartao.json") as f:
-        fatura = json.load(f)
-
+def carregar_regras():
     with open("data/regras_cartao.json") as f:
-        regras = json.load(f)
-
-    return fatura, regras
+        return json.load(f)
 
 
 def montar_contexto(fatura, regras):
-    contexto = f"""
+    return f"""
 REGRAS DO CARTÃO:
 {json.dumps(regras, indent=2, ensure_ascii=False)}
 
 DADOS DA FATURA:
 {json.dumps(fatura, indent=2, ensure_ascii=False)}
 """
-    return contexto
 
 
 SYSTEM_PROMPT = """
@@ -308,8 +302,8 @@ Agente:
 """
 
 
-def responder(pergunta):
-    fatura, regras = carregar_dados()
+def responder(pergunta, fatura):
+    regras = carregar_regras()
     contexto = montar_contexto(fatura, regras)
 
     response = client.chat.completions.create(
