@@ -83,4 +83,4 @@ O impacto é direto: ajudar pessoas a entender melhor seus gastos e tomar decis�
 
 ## Link do Vídeo
 
-[Clara: Assistente Financeiro para Interpretação de Faturas de Cartão de Crédito](https://www.loom.com/share/7c92cd31769d45d4bbd95bc63fd429a8)
+[Clara: Assistente Financeira para Interpretação de Faturas de Cartão de Crédito](https://www.loom.com/share/7c92cd31769d45d4bbd95bc63fd429a8)
