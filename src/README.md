@@ -56,7 +56,7 @@ A aplicação utiliza:
 
 ---
 
-# ⚙️ Setup Completo (Profissional)
+# ⚙️ Setup Completo
 
 ## 1️⃣ Criar `.gitignore`
 
