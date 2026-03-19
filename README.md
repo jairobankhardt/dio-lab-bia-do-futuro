@@ -1,149 +1,252 @@
-# 🤖 Agente Financeiro Inteligente com IA Generativa
+# 💳 Clara — Assistente Inteligente de Fatura de Cartão
 
-## Contexto
-
-Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots reativos para **agentes inteligentes e proativos**. Neste desafio, você vai idealizar e prototipar um agente financeiro que utiliza IA Generativa para:
-
-- **Antecipar necessidades** ao invés de apenas responder perguntas
-- **Personalizar** sugestões com base no contexto de cada cliente
-- **Cocriar soluções** financeiras de forma consultiva
-- **Garantir segurança** e confiabilidade nas respostas (anti-alucinação)
-
-> [!TIP]
-> Na pasta [`examples/`](./examples/) você encontra referências de implementação para cada etapa deste desafio.
+> Transformando faturas complexas em respostas simples usando IA generativa
 
 ---
 
-## O Que Você Deve Entregar
+## 🚀 Sobre o Projeto
 
-### 1. Documentação do Agente
+A **Clara** é uma agente financeira inteligente que ajuda usuários a entender suas faturas de cartão de crédito de forma simples, clara e interativa.
 
-Defina **o que** seu agente faz e **como** ele funciona:
+Em vez de analisar manualmente a fatura, o usuário pode fazer perguntas em linguagem natural como:
 
-- **Caso de Uso:** Qual problema financeiro ele resolve? (ex: consultoria de investimentos, planejamento de metas, alertas de gastos)
-- **Persona e Tom de Voz:** Como o agente se comporta e se comunica?
-- **Arquitetura:** Fluxo de dados e integração com a base de conhecimento
-- **Segurança:** Como evitar alucinações e garantir respostas confiáveis?
+- "Qual o valor total da minha fatura?"
+- "Qual foi minha maior compra?"
+- "O que acontece se eu pagar só o mínimo?"
 
-📄 **Template:** [`docs/01-documentacao-agente.md`](./docs/01-documentacao-agente.md)
-
----
-
-### 2. Base de Conhecimento
-
-Utilize os **dados mockados** disponíveis na pasta [`data/`](./data/) para alimentar seu agente:
-
-| Arquivo | Formato | Descrição |
-|---------|---------|-----------|
-| `transacoes.csv` | CSV | Histórico de transações do cliente |
-| `historico_atendimento.csv` | CSV | Histórico de atendimentos anteriores |
-| `perfil_investidor.json` | JSON | Perfil e preferências do cliente |
-| `produtos_financeiros.json` | JSON | Produtos e serviços disponíveis |
-
-Você pode adaptar ou expandir esses dados conforme seu caso de uso.
-
-📄 **Template:** [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md)
+A Clara interpreta os dados da fatura e responde de forma **educativa, confiável e baseada em dados reais**.
 
 ---
 
-### 3. Prompts do Agente
+## 🎯 Problema
 
-Documente os prompts que definem o comportamento do seu agente:
+Muitas pessoas têm dificuldade em entender a fatura do cartão de crédito.
 
-- **System Prompt:** Instruções gerais de comportamento e restrições
-- **Exemplos de Interação:** Cenários de uso com entrada e saída esperada
-- **Tratamento de Edge Cases:** Como o agente lida com situações limite
+As informações estão disponíveis, mas:
 
-📄 **Template:** [`docs/03-prompts.md`](./docs/03-prompts.md)
+- são pouco intuitivas  
+- exigem interpretação manual  
+- não explicam o impacto financeiro  
 
----
-
-### 4. Aplicação Funcional
-
-Desenvolva um **protótipo funcional** do seu agente:
-
-- Chatbot interativo (sugestão: Streamlit, Gradio ou similar)
-- Integração com LLM (via API ou modelo local)
-- Conexão com a base de conhecimento
-
-📁 **Pasta:** [`src/`](./src/)
+Isso pode levar a decisões ruins, como pagar apenas o mínimo sem entender as consequências.
 
 ---
 
-### 5. Avaliação e Métricas
+## 💡 Solução
 
-Descreva como você avalia a qualidade do seu agente:
+A Clara resolve esse problema através de:
 
-**Métricas Sugeridas:**
-- Precisão/assertividade das respostas
-- Taxa de respostas seguras (sem alucinações)
-- Coerência com o perfil do cliente
+- IA generativa (LLM)
+- Dados estruturados (JSON)
+- Interface conversacional (Streamlit)
 
-📄 **Template:** [`docs/04-metricas.md`](./docs/04-metricas.md)
+O usuário pode:
 
----
-
-### 6. Pitch
-
-Grave um **pitch de 3 minutos** (estilo elevador) apresentando:
-
-- Qual problema seu agente resolve?
-- Como ele funciona na prática?
-- Por que essa solução é inovadora?
-
-📄 **Template:** [`docs/05-pitch.md`](./docs/05-pitch.md)
+✔ Fazer perguntas em linguagem natural  
+✔ Enviar sua própria fatura em JSON  
+✔ Obter respostas claras e contextualizadas  
 
 ---
 
-## Ferramentas Sugeridas
+## ⚙️ Como Funciona
 
-Todas as ferramentas abaixo possuem versões gratuitas:
+Fluxo da aplicação:
 
-| Categoria | Ferramentas |
-|-----------|-------------|
-| **LLMs** | [ChatGPT](https://chat.openai.com/), [Copilot](https://copilot.microsoft.com/), [Gemini](https://gemini.google.com/), [Claude](https://claude.ai/), [Ollama](https://ollama.ai/) |
-| **Desenvolvimento** | [Streamlit](https://streamlit.io/), [Gradio](https://www.gradio.app/), [Google Colab](https://colab.research.google.com/) |
-| **Orquestração** | [LangChain](https://www.langchain.com/), [LangFlow](https://www.langflow.org/), [CrewAI](https://www.crewai.com/) |
-| **Diagramas** | [Mermaid](https://mermaid.js.org/), [Draw.io](https://app.diagrams.net/), [Excalidraw](https://excalidraw.com/) |
+1. O usuário envia uma fatura (ou usa a padrão)  
+2. Os dados são estruturados em JSON  
+3. O contexto é enviado ao modelo de linguagem  
+4. A Clara responde com base nos dados da fatura  
 
 ---
 
-## Estrutura do Repositório
+## 🧠 Arquitetura
 
-```
-📁 lab-agente-financeiro/
-│
-├── 📄 README.md
-│
-├── 📁 data/                          # Dados mockados para o agente
-│   ├── historico_atendimento.csv     # Histórico de atendimentos (CSV)
-│   ├── perfil_investidor.json        # Perfil do cliente (JSON)
-│   ├── produtos_financeiros.json     # Produtos disponíveis (JSON)
-│   └── transacoes.csv                # Histórico de transações (CSV)
-│
-├── 📁 docs/                          # Documentação do projeto
-│   ├── 01-documentacao-agente.md     # Caso de uso e arquitetura
-│   ├── 02-base-conhecimento.md       # Estratégia de dados
-│   ├── 03-prompts.md                 # Engenharia de prompts
-│   ├── 04-metricas.md                # Avaliação e métricas
-│   └── 05-pitch.md                   # Roteiro do pitch
-│
-├── 📁 src/                           # Código da aplicação
-│   └── app.py                        # (exemplo de estrutura)
-│
-├── 📁 assets/                        # Imagens e diagramas
-│   └── ...
-│
-└── 📁 examples/                      # Referências e exemplos
-    └── README.md
-```
+    Usuário → Streamlit → Agente → LLM → Resposta
+
+- app.py → Interface  
+- agente.py → Lógica e IA  
+- config.py → Configuração  
 
 ---
 
-## Dicas Finais
+## 🗂 Estrutura do Projeto
 
-1. **Comece pelo prompt:** Um bom system prompt é a base de um agente eficaz
-2. **Use os dados mockados:** Eles garantem consistência e evitam problemas com dados sensíveis
-3. **Foque na segurança:** No setor financeiro, evitar alucinações é crítico
-4. **Teste cenários reais:** Simule perguntas que um cliente faria de verdade
-5. **Seja direto no pitch:** 3 minutos passam rápido, vá ao ponto
+    src/
+    ├── app.py
+    ├── agente.py
+    ├── config.py
+    └── requirements.txt
+
+    data/
+    ├── fatura_cartao.json
+    └── regras_cartao.json
+
+    docs/
+    ├── 01-documentacao-agente.md
+    ├── 02-base-conhecimento.md
+    ├── 03-prompts.md
+    ├── 04-metricas.md
+    └── 05-pitch.md
+
+---
+
+## ⚡ Como Executar
+
+### 1. Criar ambiente virtual
+
+    python3 -m venv .venv
+    source .venv/bin/activate
+
+---
+
+### 2. Instalar dependências
+
+    pip install -r src/requirements.txt
+
+---
+
+### 3. Configurar chave da OpenAI
+
+Crie um arquivo `.env` na raiz:
+
+    OPENAI_API_KEY=sua_chave_aqui
+
+---
+
+### 4. Executar aplicação
+
+    streamlit run src/app.py
+
+---
+
+## 💬 Teste Rápido
+
+Após rodar o app, experimente perguntar:
+
+- Qual o valor total da minha fatura?  
+- Qual foi minha maior compra?  
+- Tenho compras parceladas?  
+- O que acontece se eu pagar só o mínimo?  
+
+---
+
+## 🔒 Segurança e Confiabilidade
+
+A Clara foi projetada para evitar alucinações:
+
+- Usa apenas dados da fatura  
+- Não inventa valores  
+- Informa quando não sabe  
+- Segue regras definidas no prompt  
+
+---
+
+## 🚀 Diferenciais
+
+- Uso de IA com dados estruturados (grounding)  
+- Respostas baseadas exclusivamente na fatura  
+- Upload dinâmico de JSON  
+- Arquitetura simples e modular  
+- Foco em educação financeira  
+
+---
+
+## 📊 Métricas
+
+O agente foi avaliado com base em:
+
+- Assertividade  
+- Segurança  
+- Coerência  
+- Clareza  
+
+Detalhes em:
+
+    docs/04-metricas.md
+
+---
+
+## 🎥 Pitch
+
+Apresentação do projeto:
+
+👉 [Assistir ao pitch](https://www.loom.com/share/7c92cd31769d45d4bbd95bc63fd429a8)
+
+    https://www.loom.com/share/7c92cd31769d45d4bbd95bc63fd429a8
+---
+
+## 🚧 Melhorias Futuras
+
+A seguir estão algumas evoluções planejadas para o projeto:
+
+### 📄 Suporte a PDF
+- Permitir upload de faturas em PDF  
+- Extração automática de dados usando IA  
+- Conversão para JSON estruturado  
+
+---
+
+### 📊 Análise Automática de Gastos
+- Identificar automaticamente:
+  - maior gasto do mês  
+  - categoria com maior consumo  
+  - padrão de comportamento financeiro  
+- Gerar insights sem necessidade de pergunta  
+
+---
+
+### 💬 Histórico de Conversa
+- Implementar chat com memória  
+- Manter contexto entre perguntas  
+- Melhorar a experiência do usuário  
+
+---
+
+### 🛡 Validação de Dados
+- Validar estrutura do JSON da fatura  
+- Evitar erros causados por dados inválidos  
+- Garantir maior robustez da aplicação  
+
+---
+
+### 🎨 Melhorias de Interface
+- Interface em formato de chat (estilo WhatsApp/ChatGPT)  
+- Melhor organização visual das respostas  
+- Destaque para informações importantes  
+
+---
+
+### 📈 Métricas e Monitoramento
+- Monitorar tempo de resposta  
+- Avaliar qualidade das respostas  
+- Acompanhar uso da aplicação  
+
+---
+
+### 🔐 Segurança Avançada
+- Melhor tratamento de dados sensíveis  
+- Controle de acesso por usuário  
+- Logs de uso da aplicação  
+
+---
+
+## 🛠 Tecnologias Utilizadas
+
+- Python  
+- Streamlit  
+- OpenAI API  
+- python-dotenv  
+
+---
+
+## ⚠️ Observação
+
+Este projeto utiliza dados fictícios e tem finalidade educacional.
+
+---
+
+## 👨‍💻 Autor
+
+Jairo Bankhardt
+
+Projeto desenvolvido como parte do desafio DIO - Lab BIA do Futuro
